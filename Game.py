@@ -3,7 +3,6 @@ print ("Setup Initiated")
 
 g = input("Enter Word to be Guessed")
 array = []
-correct = False
 
 for i in range(0, len(g)):
     array.append("_")
@@ -14,10 +13,11 @@ print ("\n"*40)
 
 # Logic
 while True:
+    correct = False
     for i in range (0, len(g)):
         print(array[i], end="")
     print()
-    guess = input("First Guess")
+    guess = input()
     for i in range(0, len(g)):
         if guess == g[i]:
             correct = True
